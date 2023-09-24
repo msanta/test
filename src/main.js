@@ -7,7 +7,7 @@ function setup()
 {
     project = get_project();
 
-    var bounds = [[-3000,-3000], [15535, 6804]];
+    var bounds = [[0,0], [400, 400]];
     map = L.map('map', {
         crs: L.CRS.Simple,
         minZoom: -4,
@@ -22,7 +22,7 @@ function setup()
     populate_layers_list();
 
     map.fitBounds(bounds);
-    map.setZoom(-3);
+    map.setZoom(0);
 
 
     map.on('click', function(e){
@@ -171,11 +171,27 @@ function get_project()
             {
                 "url": "./surveys/test/two.jpg",
                 "name": "Test 2",
-                "bounds": [[0, 200], [200, 200]],
+                "bounds": [[0, 200], [200, 400]],
                 "grouping": "",
                 "actual_size": [200, 200],
                 "default_state": "active"
             },
+            {
+                "url": "./surveys/test/three.jpg",
+                "name": "Test 3",
+                "bounds": [[200, 200], [400, 400]],
+                "grouping": "",
+                "actual_size": [200, 200],
+                "default_state": "inactive"
+            },
+            {
+                "url": "./surveys/test/four.jpg",
+                "name": "Test 4",
+                "bounds": [[200, 0], [400, 200]],
+                "grouping": "",
+                "actual_size": [200, 200],
+                "default_state": "inactive"
+            }
             
         ]
     };
