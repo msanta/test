@@ -1,0 +1,26 @@
+#map {
+    -height: 600px;
+    -height: 99%;
+    -border: 1px solid green;
+}
+
+.menu-btn {
+    position: absolute;
+    top: 12px;
+    left: 60px;
+    z-index: 1000;
+}
+
+.layer_level_0 {
+    margin-left: 0em;
+}
+.layer_level_1 {
+    margin-left: 2em;
+}
+.layer_active {
+    background-color: rgb(38, 153, 189);
+}
+
+#layers_list {
+    user-select: none;
+}
