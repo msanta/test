@@ -8,9 +8,11 @@
     <link rel="stylesheet" href="./css/app.css" />
     <link rel="stylesheet" href="./bootstrap/css/bootstrap.min.css" />
     <script src="./leaflet/leaflet.js"></script>
+    <script src="./src/app.js"></script>
     <script src="./src/main.js"></script>
     <script src="./jquery/jquery-3.7.0.min.js"></script>
     <script src="./bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="./jszip/jszip.min.js"></script>
 </head>
 
 <body>
@@ -34,6 +36,7 @@
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
+            <input type="file" id="file" style="display:none" onchange="file_selected()"/><button onclick="showfilebrowser()">Open Survey</button>
             <h3>Layers Loaded</h3>
             <div id="layers_list">
                 
@@ -44,7 +47,8 @@
 
 <script>
     $(function () {
-        setup();
+        //$('#file').change(file_selected);
+        //setup();
     })
 
 </script>
